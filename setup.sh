@@ -7,7 +7,7 @@ source "$DIR/includes/util.sh"
 
 setup() {
   local name
-  local names=(packages git)
+  local names=(packages bashrc git)
   for name in "${names[@]}"; do
     # shellcheck source=/dev/null
     source "$DIR/includes/${name}.sh"

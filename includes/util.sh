@@ -15,11 +15,27 @@ util.progress() {
   printf "\t%s\n" "$message"
 }
 
+# ------------------------------------------------------------------------------
+
+util.append() {
+  local path="$1"
+  local text="$2"
+  local root="$3"
+
+  if [ -z "$root" ]; then
+    printf "\n$text" >> "$path"
+  else
+    printf "\n$text" | sudo tee -a "$path" >& /dev/null
+  fi
+}
+
 util.installPackage() {
   local name="$1"
   util.progress "installing $name"
   sudo apt-get -y install "$name" >& /dev/null
 }
+
+# ------------------------------------------------------------------------------
 
 util.assertContains() {
   local path="$1"
