@@ -17,6 +17,17 @@ util.progress() {
 
 # ------------------------------------------------------------------------------
 
+util.wget() {
+  local url="$1"
+  local filename="$2"
+
+  if [ -z "$filename" ]; then
+    wget -q --no-check-certificate "$url"
+  else
+    wget -q --no-check-certificate "$url" -O "$filename"
+  fi
+}
+
 util.append() {
   local path="$1"
   local text="$2"
