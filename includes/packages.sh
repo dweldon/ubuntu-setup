@@ -12,6 +12,7 @@ packages.execute() {
     mediainfo
     shellcheck
     chromium-browser
+    ubuntu-restricted-extras
   )
   for package in "${packages[@]}"; do
     util.installPackage $package
