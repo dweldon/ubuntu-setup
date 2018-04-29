@@ -7,7 +7,7 @@ source "$DIR/includes/util.sh"
 
 setup() {
   local name
-  local names=(packages bashrc node meteor ffmpeg atom git disk fonts)
+  local names=(packages bashrc node meteor ffmpeg atom git disk cleanup fonts)
   for name in "${names[@]}"; do
     # shellcheck source=/dev/null
     source "$DIR/includes/${name}.sh"
