@@ -7,7 +7,7 @@ source "$DIR/includes/util.sh"
 
 setup() {
   local name
-  local names=(packages bashrc node meteor ffmpeg git)
+  local names=(packages bashrc node meteor ffmpeg atom git)
   for name in "${names[@]}"; do
     # shellcheck source=/dev/null
     source "$DIR/includes/${name}.sh"
