@@ -17,6 +17,11 @@ node.installModule() {
 node.install() {
   local version="$1"
 
+  # Default to the latest version
+  if [ -z "$version" ]; then
+    version=$(node.latest)
+  fi
+
   local filename="node-v${version}-linux-x64.tar.gz"
   local url="https://nodejs.org/dist/v${version}/${filename}"
   local nodeDir="$HOME/local"
