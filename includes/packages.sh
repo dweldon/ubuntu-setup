@@ -5,6 +5,7 @@ packages.execute() {
 
   local package
   local packages=(
+    ntp
     curl
     meld
     tree
@@ -12,7 +13,6 @@ packages.execute() {
     mediainfo
     shellcheck
     chromium-browser
-    ubuntu-restricted-extras
   )
   for package in "${packages[@]}"; do
     util.installPackage $package
