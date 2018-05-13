@@ -12,7 +12,7 @@ packages.execute() {
     tofrodos
     mediainfo
     shellcheck
-    chromium-browser
+    build-essential
   )
   for package in "${packages[@]}"; do
     util.installPackage $package
