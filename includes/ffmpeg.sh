@@ -4,7 +4,7 @@ ffmpeg.execute() {
   util.message 'installing ffmpeg'
 
   local dirname='ffmpeg'
-  local filename='ffmpeg-release-64bit-static.tar.xz'
+  local filename='ffmpeg-release-amd64-static.tar.xz'
 
   util.wget "http://johnvansickle.com/ffmpeg/releases/${filename}"
   mkdir "$dirname"
