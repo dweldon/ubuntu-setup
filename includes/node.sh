@@ -42,10 +42,9 @@ node.install() {
   # Install modules
   local module
   local modules=(
-    yarn
+    apollo
     coffeelint
     coffee-script
-    npm-check-updates
   )
   for module in "${modules[@]}"; do
     node.installModule "$module"
